@@ -1,10 +1,10 @@
 .toolbar{
-    position: fixed;
+    position: relative;
     width: 100%;
-    padding: 0 170px;
+    padding: 20px 170px;
     display: flex;
     align-items: center;
-    top: 45px;
+    // top: 45px;
     z-index: 2000;
     .left{
         width: 30%;

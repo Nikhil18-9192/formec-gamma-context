@@ -4,11 +4,12 @@
     height: 650px;
     padding: 172px 170px 75px 170px;
     background: linear-gradient(311.83deg, #25D6D9 0.85%, rgba(255, 255, 255, 0) 63.18%);
-    background-size: 120% 250%;
+    background-size: 165% 100%;
+    background-position: bottom left;
     display: flex;
     .left{
-        width: 50%;
-        
+         width: 50%;   
+
     }
     .right{
         width: 50%;
