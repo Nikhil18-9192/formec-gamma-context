@@ -13,7 +13,7 @@ const Toolbar = () => {
             <div className={styles.right}>
                 <ul>
                     {menuItem.map((list, i) => (
-                        <li> <Link href={list.path}>{list.name}</Link></li>
+                        <li key={i}> <Link href={list.path}>{list.name}</Link></li>
                     ))}
                 </ul>
             </div>
