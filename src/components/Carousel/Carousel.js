@@ -17,13 +17,15 @@ export default function Carousel() {
             : setcurrentIndex(0);
     }
 
-    // useEffect(() => {
-    //     setInterval(() => {
-    //         currentIndex < slides.length - 1
-    //             ? setcurrentIndex(currentIndex + 1)
-    //             : setcurrentIndex(0);
-    //     }, 2000);
-    // }, [currentIndex])
+    useEffect(() => {
+        const interval = setInterval(() => {
+            currentIndex < slides.length - 1
+                ? setcurrentIndex(currentIndex + 1)
+                : setcurrentIndex(0)
+        }, 2000)
+        return () => clearInterval(interval)
+    }, [currentIndex])
+
     return (
         <div className={styles.carousel}>
             <h4>{currentItem().title}</h4>
