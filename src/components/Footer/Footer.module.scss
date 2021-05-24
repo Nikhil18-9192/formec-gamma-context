@@ -1,24 +1,85 @@
 .footer {
-
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  img {
-    margin-left: 0.5rem;
-  }
-
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 55px 171px;
+    .title{
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 42px;
+      text-align: center;
+      margin-bottom: 55px;
+    }
+    .container{
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 63px;
+      .navigation{
+        display: flex;
+        align-items: flex-end;
+        flex-grow: 1;
+        a{
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 162.19%;
+          color: #9F9F9F;
+        }
+      }
+      .form{
+         text-align: center;
+        width: 292px;
+        input{
+          width: 100%;
+          height: 54px;
+          border: 1px solid #ABABAB;
+          box-sizing: border-box;
+          border-radius: 66px;
+          text-align: center;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 23px;
+          margin-bottom: 30px;
+          &::placeholder{
+            color: #C4C4C4;
+          }
+        }
+        .btn{
+          width: 173px;
+          height: 48px;
+          background: linear-gradient(233.7deg, #24D0D8 28.83%, #0269BE 119.55%);
+          border-radius: 66px;
+          border: none;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 23px;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+      .social{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-grow: 1;
+       .icons{    
+          a{
+            margin-left: 20px;
+          }     
+       }
+      }
+    }
+    .copyright{
+      text-align: center;
+      p{
+        font-size: 11px;
+        line-height: 13px;
+        font-weight: 400;
+        color: #A4A4A4;
+      }
+      .formec{
+        margin-top: 12px;
+      }
+    }
 }
 
-.footerLogo {
-  height: 1em;
-}
+ 

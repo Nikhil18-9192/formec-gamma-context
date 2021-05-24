@@ -7,7 +7,6 @@ export default function Carousel() {
         return slides[currentIndex]
     }
     const prev = () => {
-        console.log(slides.length - 1, currentIndex);
         currentIndex >= 1
             ? setcurrentIndex(currentIndex - 1)
             : setcurrentIndex(slides.length - 1);

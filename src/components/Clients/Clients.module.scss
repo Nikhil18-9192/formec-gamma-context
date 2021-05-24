@@ -1,0 +1,38 @@
+.clients{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #F5F5F5;
+    padding: 135px 0;
+    text-align: center;
+    .customshape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    
+    .customshape svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 75px;
+    }
+    
+    .customshape .shapefill {
+        fill: #FFFFFF;
+    }
+    .title{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 68px;
+    }
+    img{
+        width: 1044px;
+        height: 423px;
+        object-fit: contain;
+    }
+}
