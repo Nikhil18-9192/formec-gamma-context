@@ -7,10 +7,14 @@ const Toolbar = () => {
     return (
         <div className={styles.toolbar}>
             <div className={styles.left}>
-                <div className={styles.logo}>
-                    <img src="/assets/logo.png" alt="" />
-                </div>
-                <p>Formec Media LLP</p>
+                <Link href="/">
+                    <div className={styles.logo}>
+                        <img src="/assets/logo.png" alt="" />
+                    </div>
+                </Link>
+                <Link href="/">
+                    <p>Formec Media LLP</p>
+                </Link>
             </div>
             <div className={styles.right}>
                 <ul>

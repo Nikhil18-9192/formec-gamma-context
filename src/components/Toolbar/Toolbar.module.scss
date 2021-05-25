@@ -1,16 +1,16 @@
 .toolbar{
-    position: relative;
+    position: absolute;
     width: 100%;
-    padding: 20px 170px;
+    padding: 0 170px;
     display: flex;
     align-items: center;
-    // top: 45px;
+    top: 45px;
     z-index: 2000;
     .left{
         width: 30%;
         display: flex;
         align-items: center;
-         
+        cursor: pointer;
         .logo{
             width: 35px;
             height: 35px;
