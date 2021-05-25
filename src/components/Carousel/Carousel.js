@@ -1,8 +1,10 @@
 import styles from './Carousel.module.scss'
 import { slides } from '../../utils/index'
 import { useEffect, useState } from 'react'
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 export default function Carousel() {
     const [currentIndex, setcurrentIndex] = useState(0)
+    const [appearSlide, setappearSlide] = useState(true)
     function currentItem() {
         return slides[currentIndex]
     }
@@ -22,16 +24,27 @@ export default function Carousel() {
             currentIndex < slides.length - 1
                 ? setcurrentIndex(currentIndex + 1)
                 : setcurrentIndex(0)
-        }, 2000)
+        }, 5000)
         return () => clearInterval(interval)
     }, [currentIndex])
 
     return (
         <div className={styles.carousel}>
-            <h4>{currentItem().title}</h4>
-            <div className={styles.logo}><img src={currentItem().logo} alt="" /></div>
-            <p><span>Industry:</span> {currentItem().industry}</p>
-            <p><span>Scope of work:</span>{currentItem().scope}</p>
+            {/* <TransitionGroup>
+                <CSSTransition
+                    timeout={2000}
+                    classNames={styles.slide}
+                    key={currentItem().title}
+                > */}
+            <div className={styles.slideData}>
+                <h4>{currentItem().title}</h4>
+                <div className={styles.logo}><img src={currentItem().logo} alt="" /></div>
+                <p><span>Industry:</span> {currentItem().industry}</p>
+                <p><span>Scope of work:</span>{currentItem().scope}</p>
+            </div>
+            {/* </CSSTransition>
+            </TransitionGroup> */}
+
             <div className={styles.controls}>
                 <div className={styles.left} onClick={prev}>
                     <img src="/assets/left-arrow.png" alt="left" />

@@ -2,6 +2,13 @@
     position: relative;
     width: 100%;
     height: 100%;
+     overflow: hidden;
+    
+    .slideData{
+        max-height: 400px;
+        max-width: 400px;
+        overflow: hidden;
+    }
     h4{
         font-weight: 700;
         font-size: 40px;
@@ -30,6 +37,7 @@
         }
     }
     .controls{
+       
         display: flex;
         margin-top: 58px;
          img{
@@ -66,3 +74,24 @@
         }
     }    
 }
+ 
+// .fade-enter{
+//     opacity: 0;
+//     z-index: 1;
+// }
+// .fade-enter.fade-enter-active{
+//     opacity: 1;
+//     transition: 3s ease all;
+// }
+
+// .fade-exit{
+//     opacity: 0;
+// }
+
+// .fade-enter.fade-enter-active{
+//      opacity: 1;
+//     transition: 0.3s ease all;
+// }
+// .fade-exit-done{
+//     opacity: 0;
+// }

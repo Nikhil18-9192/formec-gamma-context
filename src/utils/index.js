@@ -1,5 +1,5 @@
 const menuItem = [
-    { name: 'Digital Marketing', path: '/' },
+    { name: 'Digital Marketing', path: '/marketing' },
     { name: 'Web & App Development', path: '/' },
     { name: 'Video Production', path: '/' },
 ]

@@ -1,7 +1,9 @@
 import styles from './Toolbar.module.scss';
 import { menuItem } from '../../utils/index'
 import Link from 'next/link'
+import { useRouter } from "next/router";
 const Toolbar = () => {
+    const router = useRouter();
     return (
         <div className={styles.toolbar}>
             <div className={styles.left}>
@@ -13,7 +15,7 @@ const Toolbar = () => {
             <div className={styles.right}>
                 <ul>
                     {menuItem.map((list, i) => (
-                        <li key={i}> <Link href={list.path}>{list.name}</Link></li>
+                        <li key={i} className={router.pathname == list.path ? styles.active : ''}> <Link href={list.path} as={list.path}>{list.name}</Link></li>
                     ))}
                 </ul>
             </div>
