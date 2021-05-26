@@ -6,9 +6,9 @@ import reducer from './reducer'
 function Provider({ children }) {
     const [state, dispatch] = useReducer(reducer, initialState)
     return (
-        <GlobaleContext.provider values={{ state, dispatch }}>
-            {{ children }}
-        </GlobaleContext.provider>
+        <GlobaleContext.Provider value={{ state, dispatch }}>
+            {children}
+        </GlobaleContext.Provider>
 
     )
 }
