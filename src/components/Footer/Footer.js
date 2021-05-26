@@ -1,6 +1,16 @@
 import styles from './Footer.module.scss';
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
 const Footer = () => {
+  const [positionX, setpositionX] = useState(0);
+  const [positionY, setpositionY] = useState(0);
+
+  const cursorPosition = (e) => {
+    setpositionX(e.clientX - e.target.offsetLeft);
+    setpositionY(e.clientY - e.target.offsetTop)
+    // console.log(positionX, positionY);
+  }
+
   return (
     <div className={styles.footer}>
       <h2 className={styles.title}>Are you interested ? Get in contact...</h2>
@@ -10,7 +20,7 @@ const Footer = () => {
         </div>
         <div className={styles.form}>
           <input type="number" placeholder="Enter Mobile Number" />
-          <button className={styles.btn}>Get Quote</button>
+          <button className={styles.btn} onMouseMove={(e) => cursorPosition(e)}> Get Quote</button>
         </div>
         <div className={styles.social}>
           <div className={styles.icons}>

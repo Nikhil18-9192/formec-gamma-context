@@ -1,5 +1,6 @@
-@import '../../styles/settings/_settings';
-.header{
+@import "../../styles/settings/_settings";
+@import "../../styles/mixin.scss";
+.header {
     position: relative;
     width: 100%;
     height: 100%;
@@ -8,46 +9,70 @@
     background-position: bottom left;
     padding-top: 175px;
     padding-bottom: 85px;
-    .content{
+    @include for-phone-only {
+        padding-top: 110px;
+        background-size: 215% 100%;
+    }
+    .content {
         max-width: 732px;
         text-align: center;
         margin: 0 auto;
-        h1{
+        h1 {
             font-weight: 700;
             font-size: 48px;
             line-height: 56px;
             padding-bottom: 45px;
+            @include for-phone-only {
+                font-size: 36px;
+                line-height: 42px;
+                max-width: 234px;
+                margin: 0 auto;
+                padding-bottom: 23px;
+            }
         }
-        h4{
+        h4 {
             font-size: 24px;
             line-height: 28px;
             font-weight: 400;
             padding-bottom: 23px;
+            @include for-phone-only {
+                padding-bottom: 40px;
+            }
         }
-        p{
+        p {
             font-size: 18px;
             line-height: 21px;
             color: #767676;
             font-weight: 400;
+            @include for-phone-only {
+                max-width: 311px;
+                margin: 0 auto;
+            }
         }
     }
 
-    .container{
+    .container {
         margin-top: 170px;
         text-align: center;
-        .wrapper{
+        @include for-phone-only {
+            margin-top: 60px;
+        }
+        .wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
             column-gap: 62px;
             margin-top: 20px;
-            .card{
+            @include for-phone-only {
+                flex-direction: column;
+            }
+            .card {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-               
-                .icon{
+
+                .icon {
                     width: 120px;
                     height: 120px;
                     background: #fff;
@@ -57,21 +82,25 @@
                     align-items: center;
                     border-radius: 50%;
                     margin-bottom: 40px;
-                    img{
+                    @include for-phone-only {
+                        width: 88px;
+                        height: 88px;
+                        margin-bottom: 25px;
+                        margin-top: 50px;
+                    }
+                    img {
                         width: 65px;
                         height: 65px;
                         object-fit: contain;
+                        @include for-phone-only {
+                            width: 45px;
+                            height: 45px;
+                        }
                     }
                 }
             }
         }
     }
-
-
-
-
-
-
 
     .customshape {
         position: absolute;
@@ -81,15 +110,15 @@
         overflow: hidden;
         line-height: 0;
     }
-    
+
     .customshape svg {
         position: relative;
         display: block;
         width: calc(100% + 1.3px);
         height: 75px;
     }
-    
+
     .customshape .shapefill {
-        fill: #FFFFFF;
+        fill: #ffffff;
     }
 }

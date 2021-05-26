@@ -1,6 +1,6 @@
-@import '../../styles/settings/_settings';
-
-.header{
+@import "../../styles/settings/_settings";
+@import "../../styles/mixin.scss";
+.header {
     position: relative;
     width: 100%;
     height: 650px;
@@ -9,19 +9,35 @@
     background-size: 165% 100%;
     background-position: bottom left;
     display: flex;
-    .left{
-         width: 50%;   
-
+    @include for-phone-only {
+        padding: 109px 20px 33px 20px;
+        flex-direction: column;
+        height: 100%;
     }
-    .right{
+    .left {
+        width: 50%;
+        @include for-phone-only {
+            width: 100%;
+        }
+    }
+    .right {
         width: 50%;
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        img{
+        @include for-phone-only {
+            width: 100%;
+            justify-content: center;
+            margin-top: 44px;
+        }
+        img {
             width: 549px;
             height: 418px;
             object-fit: contain;
+            @include for-phone-only {
+                width: 211px;
+                height: 161px;
+            }
         }
     }
 }
