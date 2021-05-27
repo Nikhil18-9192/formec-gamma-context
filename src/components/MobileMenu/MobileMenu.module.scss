@@ -1,0 +1,31 @@
+@import "../../styles/mixin.scss";
+
+.mobileMenu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: none;
+    background: #fff;
+    z-index: 1999;
+    @include for-phone-only {
+        display: block;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 75px;
+        li {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 23px;
+            border-bottom: 1px solid #bfbfbf;
+            padding: 15px 50px;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+.active {
+    color: #0268be;
+}
