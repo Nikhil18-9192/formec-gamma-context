@@ -5,7 +5,7 @@ import Search from '../components/SearchCustomer'
 import Strategy from '../components/Strategy'
 export default function marketing() {
     return (
-        <div className={marketing}>
+        <div className={styles.marketing}>
             <Header />
             <Search />
             <Strategy />
