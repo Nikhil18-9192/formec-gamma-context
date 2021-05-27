@@ -5,8 +5,6 @@ import PhoneToolbar from '../components/PhoneToolbar'
 import MenuButton from '../components/MenuButton'
 import MobileMenu from '../components/MobileMenu'
 import GlobaleContext from './context/createContext'
-import MessengerCustomerChat from 'react-messenger-customer-chat';
-import styles from './Layout.module.scss'
 
 export default function Layout({ children }) {
     const { state, dispatch } = useContext(GlobaleContext)
@@ -16,16 +14,13 @@ export default function Layout({ children }) {
             return <MobileMenu />
         }
     }
-    return <div className={styles.Layout}>
+    return <div className="layout">
         <Toolbar />
         <PhoneToolbar />
         <MenuButton />
         {menuComp()}
         {children}
         <Footer />
-        <MessengerCustomerChat
-            pageId="944479732728027"
-            appId="1470277913016171"
-        />,
+
     </div>
 }
