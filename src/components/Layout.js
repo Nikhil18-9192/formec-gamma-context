@@ -5,6 +5,7 @@ import PhoneToolbar from '../components/PhoneToolbar'
 import MenuButton from '../components/MenuButton'
 import MobileMenu from '../components/MobileMenu'
 import GlobaleContext from './context/createContext'
+import CustomerChat from '../components/CustomerChat'
 
 export default function Layout({ children }) {
     const { state, dispatch } = useContext(GlobaleContext)
@@ -18,6 +19,7 @@ export default function Layout({ children }) {
         <Toolbar />
         <PhoneToolbar />
         <MenuButton />
+        <CustomerChat />
         {menuComp()}
         {children}
         <Footer />
