@@ -15,7 +15,7 @@ export default function MobileMenu() {
         })
     }
     return (
-        <div className={styles.mobileMenu}>
+        <div className={styles.mobileMenu} style={menuState ? { transform: 'translateY(0)' } : { transform: 'translateY(-100%)' }}>
             <ul>
                 {menuItem.map((item, i) => (
                     <Link key={i} href={item.path} as={item.path}><li className={router.pathname == item.path ? styles.active : ''} onClick={menuToggle}>{item.name}</li></Link>
