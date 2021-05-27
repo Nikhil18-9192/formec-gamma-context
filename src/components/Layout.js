@@ -7,6 +7,7 @@ import MobileMenu from '../components/MobileMenu'
 import GlobaleContext from './context/createContext'
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styles from './Layout.module.scss'
+
 export default function Layout({ children }) {
     const { state, dispatch } = useContext(GlobaleContext)
     const menuState = state.toggle
@@ -19,6 +20,7 @@ export default function Layout({ children }) {
         <Toolbar />
         <PhoneToolbar />
         <MenuButton />
+
         {menuComp()}
         {children}
         <Footer />
