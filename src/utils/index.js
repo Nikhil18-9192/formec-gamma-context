@@ -1,7 +1,9 @@
 const menuItem = [
+    { name: 'Home', path: '/' },
     { name: 'Digital Marketing', path: '/marketing' },
     { name: 'Web & App Development', path: '/web' },
     { name: 'Video Production', path: '/video' },
+    { name: 'About', path: '/about' },
 ]
 
 const slides = [
