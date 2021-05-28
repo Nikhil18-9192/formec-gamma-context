@@ -1,5 +1,5 @@
 
-function reducer(state = initial, action) {
+function reducer(state, action) {
     switch (action.type) {
         case "toggle":
             return {
