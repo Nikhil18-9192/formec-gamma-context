@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './MarketingHeader.module.scss'
-import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Fade';
 export default function MarketingHeader() {
 
     const tailored = [
@@ -10,31 +10,31 @@ export default function MarketingHeader() {
     ]
     return (
         <div className={styles.header}>
-            <Fade top cascade>
+            <Slide bottom cascade>
                 <div className={styles.content}>
                     <h1>Market for the future.</h1>
                     <h4>Hop on! to reach your online business potential. </h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra consectetur malesuada nisl neque ultricies elit. Tortor neque nam mauris, tristique at. Risus proin sed aliquam massa.</p>
                 </div>
-            </Fade>
+            </Slide>
             <div className={styles.container}>
-                <Fade top>
+                <Slide top>
                     <p>Tailored for :</p>
-                </Fade>
-                <Fade left cascade>
-                    <div className={styles.wrapper}>
-                        {tailored.map((item, i) => (
-                            <div key={i} className={styles.card}>
-                                <div className={styles.icon}>
-                                    <img src={item.icon} alt={item.title} />
-                                </div>
-                                <div className={styles.title}>
-                                    <h4>{item.title}</h4>
-                                </div>
+                </Slide>
+
+                <div className={styles.wrapper}>
+                    {tailored.map((item, i) => (
+                        <div key={i} className={styles.card}>
+                            <div className={styles.icon}>
+                                <img src={item.icon} alt={item.title} />
                             </div>
-                        ))}
-                    </div>
-                </Fade>
+                            <div className={styles.title}>
+                                <h4>{item.title}</h4>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
             </div>
             <div className={styles.customshape}>
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

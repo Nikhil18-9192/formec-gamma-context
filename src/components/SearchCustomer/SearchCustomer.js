@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './SearchCustomer.module.scss'
-import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Fade';
 export default function SearchCustomer() {
     const data = [
         { text: 'With rightly planned digital marketing strategy & highly focused lead generation campaigns, our team of digital marketing experts ensure you get quality leads in your marketing budget.', icon: '/assets/calender.svg' },
@@ -10,24 +10,26 @@ export default function SearchCustomer() {
     ]
     return (
         <div className={styles.searchCutomer}>
-            <Fade top cascade>
+            <Slide bottom cascade>
                 <div className={styles.title}>
                     <h1>In search of new customers?</h1>
                     <h4>We have got you covered!</h4>
                 </div>
-            </Fade>
+            </Slide>
             <div className={styles.wrapper}>
                 {data.map((item, i) => (
-                    <Fade key={i} bottom cascade>
-                        <div className={styles.container}>
-                            <div className={styles.icon}>
-                                <img src={item.icon} alt="" />
-                            </div>
+
+                    <div className={styles.container}>
+                        <div className={styles.icon}>
+                            <img src={item.icon} alt="" />
+                        </div>
+                        <Slide bottom cascade>
                             <div className={styles.text}>
                                 <p>{item.text}</p>
                             </div>
-                        </div>
-                    </Fade>
+                        </Slide>
+                    </div>
+
                 ))}
 
             </div>

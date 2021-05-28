@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Clients.module.scss'
-import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Fade';
 export default function Clients() {
     return (
         <div className={styles.clients}>
@@ -9,14 +9,14 @@ export default function Clients() {
                     <path d="M1200 0L0 0 598.97 114.72 1200 0z" className={styles.shapefill}></path>
                 </svg>
             </div>
-            <Fade top cascade>
+            <Slide bottom >
                 <h2 className={styles.title}>
                     Our Clients
             </h2>
-            </Fade>
-            <Fade bottom>
-                <img src="/assets/clients.png" alt="clients" />
-            </Fade>
+            </Slide>
+
+            <img src="/assets/clients.png" alt="clients" />
+
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import styles from './Footer.module.scss';
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import Slide from 'react-reveal/Fade';
 const Footer = () => {
   const [positionX, setpositionX] = useState(0);
   const [positionY, setpositionY] = useState(0);
@@ -13,7 +14,7 @@ const Footer = () => {
 
   return (
     <div className={styles.footer}>
-      <h2 className={styles.title}>Are you interested ? Get in contact...</h2>
+      <Slide bottom> <h2 className={styles.title}>Are you interested ? Get in contact...</h2></Slide>
       <div className={styles.container}>
         <div className={styles.navigation}>
           <Link href="/">About Us</Link>
