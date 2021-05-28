@@ -20,8 +20,8 @@ export default function Strategy() {
                 <div className={styles.container}>
                     <ul>
                         {strategy.map((item, i) => (
-                            <Slide bottom cascade>
-                                <li key={i}>
+                            <Slide key={i} bottom cascade>
+                                <li >
                                     <h4>{item.title}</h4>
                                     <p>{item.desc}</p>
                                 </li>
