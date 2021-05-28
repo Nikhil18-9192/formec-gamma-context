@@ -17,18 +17,18 @@ export default function Services() {
                         <div className={styles.image}>
                             <img src={item.src} alt={item.title} />
                         </div>
-
-                        <div className={styles.text}>
-                            <Slide bottom cascade> <h2>{item.title}</h2></Slide>
-                            <Slide bottom cascade> <p>{item.desc}</p></Slide>
-                            <Link href={item.path}>Read More...</Link>
-                        </div>
-
+                        <Slide bottom cascade>
+                            <div className={styles.text}>
+                                <h2>{item.title}</h2>
+                                <p>{item.desc}</p>
+                                <Link href={item.path}>Read More...</Link>
+                            </div>
+                        </Slide>
                     </div> : <div className={styles.rtl}>
                         <Slide bottom cascade>
                             <div className={styles.text}>
-                                <Slide bottom cascade> <h2>{item.title}</h2></Slide>
-                                <Slide bottom cascade> <p>{item.desc}</p></Slide>
+                                <h2>{item.title}</h2>
+                                <p>{item.desc}</p>
                                 <Link href={item.path}>Read More...</Link>
                             </div>
                         </Slide>
