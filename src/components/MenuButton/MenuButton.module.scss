@@ -80,14 +80,14 @@
     transform: translate(0%, -105%);
 }
 .menuActive {
-    .burger_close {
+    .burgerClose {
         span {
             transition-delay: 0.5s !important;
         }
     }
 }
 .menuInactive {
-    .burger_open {
+    .burgerOpen {
         span {
             transition-delay: 0.5s !important;
         }

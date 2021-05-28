@@ -15,15 +15,15 @@ export default function MenuButton() {
 
     return (
         <div className={styles.menuButton}>
-            <div className={styles.burgerMenu} onClick={menuToggle}>
+            <div className={`${styles.burgerMenu} ${menuState ? styles.menuActive : styles.menuInactive}`} onClick={menuToggle}>
                 <div className={styles.burgerOpen}  >
-                    <span className={menuState ? styles.t1 : ''} style={menuState ? { transitionDelay: '0.5s !important' } : { transitionDelay: '0s !important' }} ></span>
-                    <span className={menuState ? styles.t1 : ''} style={menuState ? { transitionDelay: '0.5s !important' } : { transitionDelay: '0s !important' }}></span>
-                    <span className={menuState ? styles.t1 : ''} style={menuState ? { transitionDelay: '0.5s !important' } : { transitionDelay: '0s !important' }}></span>
+                    <span className={menuState ? styles.t1 : ''}   ></span>
+                    <span className={menuState ? styles.t1 : ''} ></span>
+                    <span className={menuState ? styles.t1 : ''}  ></span>
                 </div>
                 <div className={styles.burgerClose}>
-                    <span className={!menuState ? styles.t1 : ''} style={!menuState ? { transitionDelay: '0.5s !important' } : { transitionDelay: '0s !important' }}></span>
-                    <span className={!menuState ? styles.t2 : ''} style={!menuState ? { transitionDelay: '0.5s !important' } : { transitionDelay: '0s !important' }}></span>
+                    <span className={!menuState ? styles.t1 : ''}  ></span>
+                    <span className={!menuState ? styles.t2 : ''}  ></span>
                 </div>
             </div>
         </div>
