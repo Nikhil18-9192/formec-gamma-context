@@ -1,12 +1,30 @@
+import { useEffect, useRef } from 'react';
 import styles from './GetQuote.module.scss'
 import Link from 'next/link'
 import Fade from 'react-reveal/Fade';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+
 export default function GetQuote() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    useEffect(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#getquote",
+                start: "40% 40%",
+                // end: "50% 50%",
+                scrub: true,
+                markers: false,
+                triggerActions: "restart none reset none",
+            }
+        });
+        tl.to('#rocket', { yPercent: -20, duration: 10, ease: 'Power4.easeOut' })
+
+    }, [])
     return (
-        <div className={styles.getquote}>
-            <Fade bottom>
-                <img className={styles.image} src="/assets/rocket.png" alt="rocket image" />
-            </Fade>
+        <div id="getquote" className={styles.getquote}>
+            <img id="rocket" className={styles.image} src="/assets/rocket.png" alt="rocket image" />
             <Fade bottom cascade>
                 <div className={styles.content}>
                     <h4>Rocket powered push to your online presence</h4>
