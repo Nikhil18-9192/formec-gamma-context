@@ -19,7 +19,8 @@ export default function GetQuote() {
                 triggerActions: "restart none reset none",
             }
         });
-        tl.to('#rocket', { yPercent: -20, duration: 10, ease: 'Power4.easeOut' })
+        tl.to('#rocket', { xPercent: 10, yPercent: -40, duration: 10, ease: 'Power4.easeOut' })
+
 
     }, [])
     return (
