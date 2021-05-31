@@ -12,7 +12,7 @@ export default function GetQuote() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: "#getquote",
-                start: "40% 40%",
+                start: "90% 90%",
                 // end: "50% 50%",
                 scrub: true,
                 markers: false,
