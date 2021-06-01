@@ -18,7 +18,7 @@ export default function Services() {
             }
         })
         tl.from('#speaker', { scale: 0, yPercent: 30, duration: 2, ease: 'Power4.easeOut' })
-        tl.from('#line', { xPercent: -100, opacity: 0, scale: 0.4, yPercent: 30, duration: 1.5, ease: 'Power4.easeOut' })
+        tl.from('#line', { xPercent: -100, opacity: 0, scale: 0.4, yPercent: 30, duration: 1, ease: 'Power4.easeOut' })
     }, [])
     useEffect(() => {
         const tl = gsap.timeline({
