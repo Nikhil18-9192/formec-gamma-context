@@ -26,7 +26,7 @@ export default function Services() {
                 trigger: ".services",
                 start: "40% 40%",
                 scrub: false,
-                markers: true,
+                markers: false,
             }
         })
         tl.from('#bottom', { scaleY: 0, duration: 2, ease: 'Power4.easeOut' })
