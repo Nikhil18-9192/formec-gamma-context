@@ -127,28 +127,28 @@
 }
 
 #speaker {
-    animation: speaker 2s infinite linear;
+    animation: speaker 2s infinite ease-in-out;
     transform-origin: center;
     transform-box: fill-box;
-    z-index: 1;
 }
 #line {
     animation: sound 2s infinite linear;
     transform-origin: center;
     transform-box: fill-box;
+    animation-delay: 4s;
 }
 @keyframes speaker {
     0% {
         opacity: 0;
     }
-    20% {
+    100% {
         opacity: 1;
     }
 }
 @keyframes sound {
-    30% {
+    0% {
         opacity: 0;
-        transform: translateX(-100%);
+        transform: translateX(-30%);
     }
     100% {
         opacity: 1;
