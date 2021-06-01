@@ -2,15 +2,9 @@ import styles from './Footer.module.scss'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import Slide from 'react-reveal/Fade'
+import Button from '../Button'
 const Footer = () => {
-	const [positionX, setpositionX] = useState(0)
-	const [positionY, setpositionY] = useState(0)
 
-	const cursorPosition = (e) => {
-		const rect = e.target.getBoundingClientRect()
-		setpositionX(e.clientX - rect.left)
-		setpositionY(e.clientY - rect.top)
-	}
 
 	return (
 		<div className={styles.footer}>
@@ -24,18 +18,7 @@ const Footer = () => {
 				</div>
 				<div className={styles.form}>
 					<input type="number" placeholder="Enter Mobile Number" />
-					<button
-						className={styles.btn}
-						style={{
-							'--x': positionX + 'px',
-							'--y': positionY + 'px',
-							'--size': positionX > 0 ? '100px' : '0px',
-						}}
-						onMouseMove={(e) => cursorPosition(e)}
-					>
-						{' '}
-						Get Quote
-					</button>
+					<Button Children={<span>Get Quote</span>} />
 				</div>
 				<div className={styles.social}>
 					<div className={styles.icons}>

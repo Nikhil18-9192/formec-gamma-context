@@ -16,8 +16,8 @@ export default function Services() {
                         <svg width="176" height="172" viewBox="0 0 176 172" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="Group 13">
                                 <g id={styles.bg}>
-                                    <circle id="Ellipse 4" cx="93.5" cy="89.5" r="82.5" fill="#0268BE" />
-                                    <circle id="Ellipse 3" cx="82.5" cy="82.5" r="82.5" fill="#25D6D9" />
+                                    <circle id={styles.ellipse} cx="93.5" cy="89.5" r="82.5" fill="#0268BE" />
+                                    <circle id="Ellipse" cx="82.5" cy="82.5" r="82.5" fill="#25D6D9" />
                                 </g>
                                 <g id={styles.speaker}>
                                     <path id="Vector" d="M88.8891 41.0209C87.506 41.489 86.7657 42.987 87.2338 44.3701L88.4432 47.9429C81.3573 56.7962 71.9693 64.147 61.747 69.0442L70.6335 95.298C81.7287 92.9794 93.6513 93.1169 104.658 95.8462L105.867 99.4189C106.335 100.802 107.833 101.542 109.216 101.074C110.599 100.606 111.34 99.108 110.872 97.7249L92.2382 42.6761C91.7701 41.2931 90.2721 40.5528 88.8891 41.0209Z" fill="white" />
