@@ -125,34 +125,3 @@
         }
     }
 }
-
-// #speaker {
-//     animation: speaker 2s normal ease-in-out;
-//     transform-origin: center;
-//     transform-box: fill-box;
-// }
-// #line {
-//     animation: sound 2s normal linear;
-//     transform-origin: center;
-//     transform-box: fill-box;
-//     // animation-delay: 2s;
-// }
-
-@keyframes speaker {
-    0% {
-        transform: scale(0.4);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-@keyframes sound {
-    0% {
-        opacity: 0;
-        transform: translateX(-130%) scale(0.4);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0%) scale(1);
-    }
-}
