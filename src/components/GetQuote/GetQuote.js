@@ -13,15 +13,12 @@ export default function GetQuote() {
             scrollTrigger: {
                 trigger: "#getquote",
                 start: "55% 100%",
-                // end: "50% 50%",
                 scrub: true,
                 markers: false,
                 triggerActions: "restart none reset none",
             }
         });
         tl.to('#rocket', { xPercent: 10, yPercent: -40, duration: 10, ease: 'Power4.easeOut' })
-
-
     }, [])
     return (
         <div id="getquote" className={styles.getquote}>

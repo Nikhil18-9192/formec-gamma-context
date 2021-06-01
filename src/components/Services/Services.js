@@ -1,15 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './Services.module.scss'
 import { services } from '../../utils'
 import Link from 'next/link'
 import Slide from 'react-reveal/Fade';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 export default function Services() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    useEffect(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".services",
+                start: "30% 30%",
+                scrub: false,
+                markers: false,
+            }
+        })
+        tl.from('#speaker', { scale: 0, yPercent: 30, duration: 2, ease: 'Power4.easeOut' })
+        tl.from('#line', { xPercent: -100, opacity: 0, scale: 0.4, yPercent: 30, duration: 2, ease: 'Power4.easeOut' })
+    }, [])
+
     return (
         <div className={styles.services}>
             <Slide bottom >
                 <h1 className={styles.title}>Our Services</h1>
             </Slide>
-            {/* {services.map((item, i) => ( */}
+
             <div className={styles.container}>
                 <div className={styles.ltr}>
                     <div className={styles.image}>
@@ -19,19 +36,21 @@ export default function Services() {
                                     <circle id={styles.ellipse} cx="93.5" cy="89.5" r="82.5" fill="#0268BE" />
                                     <circle id="Ellipse" cx="82.5" cy="82.5" r="82.5" fill="#25D6D9" />
                                 </g>
-                                <g id={styles.speaker}>
+                                <g id="speaker">
                                     <path id="Vector" d="M88.8891 41.0209C87.506 41.489 86.7657 42.987 87.2338 44.3701L88.4432 47.9429C81.3573 56.7962 71.9693 64.147 61.747 69.0442L70.6335 95.298C81.7287 92.9794 93.6513 93.1169 104.658 95.8462L105.867 99.4189C106.335 100.802 107.833 101.542 109.216 101.074C110.599 100.606 111.34 99.108 110.872 97.7249L92.2382 42.6761C91.7701 41.2931 90.2721 40.5528 88.8891 41.0209Z" fill="white" />
                                     <path id="Vector_2" d="M70.7317 114.602C67.0238 111.234 63.3847 107.037 63.4667 102.231L50.644 105.038C49.68 105.25 48.7175 105.352 47.7617 105.394C47.7254 111.344 49.6659 116.528 51.1523 120.396C51.5314 121.387 51.8881 122.312 52.1784 123.17C52.6466 124.553 54.1445 125.293 55.5276 124.825L70.5409 119.743C71.4083 119.449 72.0625 118.727 72.2673 117.835C72.4744 116.942 72.2042 116.007 71.5534 115.364L70.7317 114.602Z" fill="white" />
                                     <path id="Vector_3" d="M36.1635 92.3346C38.0444 97.8913 43.7831 101.134 49.5131 99.8785L65.4262 96.3928L56.9451 71.337L42.1865 78.2333C36.8717 80.7159 34.2826 86.7778 36.1635 92.3346Z" fill="white" />
                                 </g>
-                                <g id={styles.line}>
+                                <g id="line">
                                     <path id="Vector_4" d="M103.813 59.5267C102.776 58.4996 102.768 56.8272 103.795 55.7904L112.11 47.3981C113.138 46.3639 114.81 46.3537 115.847 47.3808C116.883 48.408 116.891 50.0804 115.864 51.1171L107.549 59.5094C106.51 60.5526 104.843 60.5454 103.813 59.5267Z" fill="white" />
                                     <path id="Vector_5" d="M123.789 81.9013L112.086 80.2847C110.641 80.085 109.631 78.7517 109.831 77.3061C110.036 75.8612 111.366 74.8581 112.809 75.0504L124.512 76.667C125.958 76.8667 126.968 78.2 126.768 79.6456C126.568 81.0821 125.247 82.0986 123.789 81.9013Z" fill="white" />
                                     <path id="Vector_6" d="M119.916 66.7734L109.907 70.1613C108.524 70.6294 107.026 69.8891 106.558 68.506C106.09 67.1229 106.83 65.625 108.213 65.1568L118.222 61.7689C119.605 61.3008 121.103 62.0411 121.571 63.4242C122.039 64.8073 121.299 66.3052 119.916 66.7734Z" fill="white" />
                                 </g>
                             </g>
                         </svg>
+
                     </div>
+
                     <Slide bottom cascade>
                         <div className={styles.text}>
                             <h2>Digital Marketing</h2>
@@ -104,32 +123,7 @@ export default function Services() {
                         </div>
                     </Slide>
                 </div>
-                {/* {i % 2 == 0 ? <div className={styles.ltr}>
-                        <div className={styles.image}>
-                            <img src={item.src} alt={item.title} />
-                        </div>
-                        <Slide bottom cascade>
-                            <div className={styles.text}>
-                                <h2>{item.title}</h2>
-                                <p>{item.desc}</p>
-                                <Link href={item.path}>Read More...</Link>
-                            </div>
-                        </Slide>
-                    </div> : <div className={styles.rtl}>
-                        <Slide bottom cascade>
-                            <div className={styles.text}>
-                                <h2>{item.title}</h2>
-                                <p>{item.desc}</p>
-                                <Link href={item.path}>Read More...</Link>
-                            </div>
-                        </Slide>
-                        <div className={styles.image}>
-                            <img src={item.src} alt={item.title} />
-                        </div>
-                    </div>} */}
-
             </div>
-            {/* ))} */}
         </div>
     )
 }
