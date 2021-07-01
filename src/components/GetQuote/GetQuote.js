@@ -18,6 +18,7 @@ export default function GetQuote() {
                 triggerActions: "restart none reset none",
             }
         });
+        console.log(tl);
         tl.to('#rocket', { xPercent: 10, yPercent: -40, duration: 10, ease: 'Power4.easeOut' })
     }, [])
     return (
@@ -34,7 +35,7 @@ export default function GetQuote() {
             </Fade>
             <Link className={styles.button} href="/">
                 Get Quote
-                </Link>
+            </Link>
         </div>
     )
 }
