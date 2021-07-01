@@ -25,4 +25,6 @@ const strategy = [
     { title: 'Identifying your target audience', desc: 'This helps us identify the purchasing psychology of the customers. We also study their online customer journey & purchase behavior, which in turn help us create the content that will attract your target audience and lead them closer to purchase.' }
 ]
 
-export { menuItem, slides, services, strategy }
+const clients = ['/assets/clients/1.png', '/assets/clients/2.png', '/assets/clients/3.png', '/assets/clients/4.png', '/assets/clients/5.jpg', '/assets/clients/6.png', '/assets/clients/1.png', '/assets/clients/2.png', '/assets/clients/3.png', '/assets/clients/4.png', '/assets/clients/5.jpg', '/assets/clients/6.png', '/assets/clients/1.png', '/assets/clients/2.png', '/assets/clients/3.png',]
+
+export { menuItem, slides, services, strategy, clients }

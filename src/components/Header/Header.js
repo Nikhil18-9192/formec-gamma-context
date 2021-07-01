@@ -1,7 +1,9 @@
+import { useState, useEffect } from 'react'
 import styles from './Header.module.scss';
 import Carousel from '../../components/Carousel'
 
 const Header = () => {
+
     return (
         <div className={styles.header}>
             <div className={styles.left}>

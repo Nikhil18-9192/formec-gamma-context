@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Clients.module.scss'
 import Slide from 'react-reveal/Fade';
+import { clients } from '../../utils';
 export default function Clients() {
     return (
         <div className={styles.clients}>
@@ -12,10 +13,15 @@ export default function Clients() {
             <Slide bottom >
                 <h2 className={styles.title}>
                     Our Clients
-            </h2>
+                </h2>
             </Slide>
-
-            <img src="/assets/clients.png" alt="clients" />
+            <div className={styles.container}>
+                {clients.map((item, i) => (
+                    <div key={i} className={styles.image}>
+                        <img src={item} alt="client logo" />
+                    </div>
+                ))}
+            </div>
 
         </div>
     )

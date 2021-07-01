@@ -19,7 +19,7 @@ export default function SearchCustomer() {
             <div className={styles.wrapper}>
                 {data.map((item, i) => (
 
-                    <div className={styles.container}>
+                    <div key={i} className={styles.container}>
                         <div className={styles.icon}>
                             <img src={item.icon} alt="" />
                         </div>

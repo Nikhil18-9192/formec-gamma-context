@@ -14,6 +14,7 @@ export default function Carousel() {
             : setcurrentIndex(slides.length - 1);
     }
     const next = () => {
+
         currentIndex < slides.length - 1
             ? setcurrentIndex(currentIndex + 1)
             : setcurrentIndex(0);
@@ -32,7 +33,7 @@ export default function Carousel() {
         <div className={styles.carousel}>
             <Slide bottom cascade>
                 <div className={styles.slideData}>
-                    <h4>{currentItem().title}</h4>
+                    <h4   >{currentItem().title}</h4>
                     <div className={styles.logo}><img src={currentItem().logo} alt="" /></div>
                     <p><span>Industry:</span> {currentItem().industry}</p>
                     <p><span>Scope of work:</span>{currentItem().scope}</p>
